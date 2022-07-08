@@ -5,14 +5,26 @@ import java.time.ZonedDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "transaction", schema="db_onlineshop")
 public class Transaction {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private BigDecimal id;
 	
@@ -24,49 +36,4 @@ public class Transaction {
 	
 	@Column(name = "created_date")
 	private ZonedDateTime createdDate;
-
-	public Transaction() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Transaction(BigDecimal id, String transactionId, String createdBy, ZonedDateTime createdDate) {
-		super();
-		this.id = id;
-		this.transactionId = transactionId;
-		this.createdBy = createdBy;
-		this.createdDate = createdDate;
-	}
-
-	public BigDecimal getId() {
-		return id;
-	}
-
-	public void setId(BigDecimal id) {
-		this.id = id;
-	}
-
-	public String getTransactionId() {
-		return transactionId;
-	}
-
-	public void setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
-	}
-
-	public String getCreatedBy() {
-		return createdBy;
-	}
-
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
-
-	public ZonedDateTime getCreatedDate() {
-		return createdDate;
-	}
-
-	public void setCreatedDate(ZonedDateTime createdDate) {
-		this.createdDate = createdDate;
-	}
 }

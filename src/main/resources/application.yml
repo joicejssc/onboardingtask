@@ -1,6 +1,7 @@
 #Default properties
 
 server:
+  port: 4042
   servlet:
     context-path: /api
 
@@ -12,10 +13,10 @@ spring:
       ddl-auto: none
     generate-ddl: false
   datasource:
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: root
-    driver-class-name: org.postgresql.Driver
   flyway:
     enabled: true
     locations: classpath:resources/db/migration
