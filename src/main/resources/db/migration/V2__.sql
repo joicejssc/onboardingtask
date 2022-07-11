@@ -1,9 +1,0 @@
-ALTER TABLE db_onlineshop.payment ALTER COLUMN id TYPE DECIMAL USING (id::DECIMAL);
-
-ALTER TABLE db_onlineshop.product ALTER COLUMN id TYPE DECIMAL USING (id::DECIMAL);
-
-ALTER TABLE db_onlineshop.transaction ALTER COLUMN id TYPE DECIMAL USING (id::DECIMAL);
-
-ALTER TABLE db_onlineshop."user" ALTER COLUMN id TYPE DECIMAL USING (id::DECIMAL);
-
-ALTER TABLE db_onlineshop.user_information ALTER COLUMN id TYPE DECIMAL USING (id::DECIMAL);

@@ -1,4 +1,4 @@
-#Profile: dev
+#Profile: prod
 restclient:
   url:
     jsonplaceholder-client: https://jsonplaceholder.typicode.com
@@ -6,8 +6,8 @@ restclient:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/ait_guideline
     username: postgres
-    password: root
+    password: postgres
   flyway:
-    enabled: true
+    enabled: false
