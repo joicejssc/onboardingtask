@@ -22,6 +22,7 @@ public class JsonPlaceHolderPostController implements JsonPlaceHolderPostService
 
   private final JsonPlaceHolderPostService postService;
 
+  //1
   @Override
   @GetMapping("/post")
   public ResponseEntity<ResponseTemplate<ResponseList<JsonPlaceHolderPostResponse>>> getAllJsonPlaceHolderPost() {

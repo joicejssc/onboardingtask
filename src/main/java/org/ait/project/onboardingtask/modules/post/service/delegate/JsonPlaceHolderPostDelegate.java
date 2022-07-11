@@ -6,6 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface JsonPlaceHolderPostDelegate {
+
+  //4
   List<JsonPlaceHolderPost> getAllPost();
 
   Page<JsonPlaceHolderPost> getAllPostPage(Pageable pageable);

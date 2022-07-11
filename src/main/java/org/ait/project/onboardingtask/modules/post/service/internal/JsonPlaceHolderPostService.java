@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 public interface JsonPlaceHolderPostService {
 
+  //2
   ResponseEntity<ResponseTemplate<ResponseList<JsonPlaceHolderPostResponse>>>getAllJsonPlaceHolderPost();
 
   ResponseEntity<ResponseTemplate<ResponseList<JsonPlaceHolderPostResponse>>> getAllJsonPlaceHolderPostPage(

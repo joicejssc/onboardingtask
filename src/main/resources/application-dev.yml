@@ -5,6 +5,12 @@ restclient:
     reqres-client: https://reqres.in/api
 
 spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
