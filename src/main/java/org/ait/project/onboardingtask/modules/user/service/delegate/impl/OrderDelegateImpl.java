@@ -1,7 +1,6 @@
 package org.ait.project.onboardingtask.modules.user.service.delegate.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.ait.project.onboardingtask.modules.admin.model.repository.OrderAdminRepository;
 import org.ait.project.onboardingtask.modules.user.service.delegate.OrderDelegate;
 import org.springframework.stereotype.Service;
 
