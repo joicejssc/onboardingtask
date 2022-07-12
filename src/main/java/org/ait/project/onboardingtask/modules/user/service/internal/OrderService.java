@@ -6,7 +6,11 @@ import org.ait.project.onboardingtask.shared.dto.template.ResponseDetail;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseTemplate;
 import org.springframework.http.ResponseEntity;
 
+import java.math.BigDecimal;
+
 public interface OrderService {
 
     ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(OrderReq orderReq);
+
+    ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(BigDecimal id);
 }

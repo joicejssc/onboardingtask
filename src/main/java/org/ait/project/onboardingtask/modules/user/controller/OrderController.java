@@ -7,17 +7,16 @@ import org.ait.project.onboardingtask.modules.user.service.internal.OrderService
 import org.ait.project.onboardingtask.shared.dto.template.ResponseDetail;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseTemplate;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
 
 @RestController
 @RequiredArgsConstructor
 public class OrderController implements OrderService {
 
-    private  final OrderService orderService;
+    private final OrderService orderService;
 
     @Override
     @PostMapping("/addOrder")
@@ -25,5 +24,11 @@ public class OrderController implements OrderService {
             @Valid @RequestBody
             OrderReq orderReq) {
         return orderService.addOrder(orderReq);
+    }
+
+    @Override
+    @GetMapping("/{id}")
+    public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(@PathVariable BigDecimal id) {
+        return orderService.getOrderById(id);
     }
 }

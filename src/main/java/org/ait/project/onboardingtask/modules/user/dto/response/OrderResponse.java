@@ -1,34 +1,35 @@
 package org.ait.project.onboardingtask.modules.user.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderResponse {
 
-    @NotBlank(message = "{orderId.required}")
     @JsonProperty("orderId")
     private String orderId;
 
-    @NotBlank(message = "{productNo.required}")
     @JsonProperty("productNo")
     private String productNo;
 
-    @NotBlank(message = "{productName.required}")
     @JsonProperty("productName")
     private String productName;
 
-    @NotBlank(message = "{qty.required}")
     @JsonProperty("qty")
     private Integer qty;
 
-    @NotBlank(message = "{statusOrder.required}")
     @JsonProperty("statusOrder")
     private String statusOrder;
 
-    @NotBlank(message = "{createdBy.required}")
     @JsonProperty("createdBy")
     private String createdBy;
+
+    @JsonProperty("createdDate")
+    private String createdDate;
 }

@@ -14,6 +14,8 @@ import org.ait.project.onboardingtask.shared.utils.ResponseHelper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
@@ -31,5 +33,11 @@ public class OrderServiceImpl implements OrderService {
 
         return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
                 orderTransform.createOrderResponse(order));
+    }
+
+    @Override
+    public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(BigDecimal id) {
+        return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
+                orderTransform.createOrderResponse(orderDelegate.getOrderById(id)));
     }
 }
