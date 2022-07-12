@@ -1,8 +1,8 @@
-package org.ait.project.onboardingtask.modules.admin.controller;
+package org.ait.project.onboardingtask.modules.user.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.ait.project.onboardingtask.modules.admin.dto.request.OrderReq;
-import org.ait.project.onboardingtask.modules.admin.service.internal.OrderService;
+import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.service.internal.OrderService;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseDetail;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseTemplate;
 import org.ait.project.onboardingtask.shared.openfeign.order.response.CreateOrderResponse;

@@ -1,11 +1,10 @@
-package org.ait.project.onboardingtask.modules.admin.service.internal.impl;
+package org.ait.project.onboardingtask.modules.user.service.internal.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.ait.project.onboardingtask.modules.admin.dto.request.OrderReq;
-import org.ait.project.onboardingtask.modules.admin.model.entity.Order;
-import org.ait.project.onboardingtask.modules.admin.service.delegate.OrderDelegate;
-import org.ait.project.onboardingtask.modules.admin.service.internal.OrderService;
-import org.ait.project.onboardingtask.modules.admin.transform.OrderTransform;
+import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.service.delegate.OrderDelegate;
+import org.ait.project.onboardingtask.modules.user.service.internal.OrderService;
+import org.ait.project.onboardingtask.modules.user.transform.OrderTransform;
 import org.ait.project.onboardingtask.shared.constant.enums.ResponseEnum;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseDetail;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseTemplate;

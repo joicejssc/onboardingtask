@@ -1,4 +1,4 @@
-package org.ait.project.onboardingtask.modules.admin.dto.request;
+package org.ait.project.onboardingtask.modules.user.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

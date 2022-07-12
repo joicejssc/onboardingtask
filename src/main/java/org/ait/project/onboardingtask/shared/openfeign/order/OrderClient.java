@@ -1,6 +1,6 @@
 package org.ait.project.onboardingtask.shared.openfeign.order;
 
-import org.ait.project.onboardingtask.modules.admin.dto.response.OrderResponse;
+import org.ait.project.onboardingtask.modules.user.dto.response.OrderResponse;
 import org.ait.project.onboardingtask.shared.openfeign.order.request.CreateOrderRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 )
 public interface OrderClient {
 
-    @PostMapping("/order")
+    @PostMapping("/addOrder")
     OrderResponse createOrder(@RequestBody CreateOrderRequest createOrderRequest);
 }

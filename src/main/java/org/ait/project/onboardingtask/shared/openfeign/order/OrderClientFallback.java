@@ -1,6 +1,6 @@
 package org.ait.project.onboardingtask.shared.openfeign.order;
 
-import org.ait.project.onboardingtask.modules.admin.dto.response.OrderResponse;
+import org.ait.project.onboardingtask.modules.user.dto.response.OrderResponse;
 import org.ait.project.onboardingtask.shared.openfeign.order.request.CreateOrderRequest;
 import org.springframework.stereotype.Component;
 

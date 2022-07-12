@@ -3,6 +3,7 @@ restclient:
   url:
     jsonplaceholder-client: https://jsonplaceholder.typicode.com
     reqres-client: https://reqres.in/api
+    order-client: https://order/api
 
 spring:
   jpa:
