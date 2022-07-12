@@ -2,6 +2,7 @@ package org.ait.project.onboardingtask.modules.user.service.internal.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.model.entity.Order;
 import org.ait.project.onboardingtask.modules.user.service.delegate.OrderDelegate;
 import org.ait.project.onboardingtask.modules.user.service.internal.OrderService;
 import org.ait.project.onboardingtask.modules.user.transform.OrderTransform;

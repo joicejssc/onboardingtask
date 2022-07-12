@@ -1,6 +1,7 @@
 package org.ait.project.onboardingtask.modules.user.transform;
 
 import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.model.entity.Order;
 import org.ait.project.onboardingtask.shared.openfeign.order.request.CreateOrderRequest;
 import org.ait.project.onboardingtask.shared.openfeign.order.response.CreateOrderResponse;
 import org.mapstruct.Mapper;
