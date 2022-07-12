@@ -3,14 +3,13 @@ restclient:
   url:
     jsonplaceholder-client: https://jsonplaceholder.typicode.com
     reqres-client: https://reqres.in/api
-    order-client: https://order/api
 
 spring:
   jpa:
     database: postgresql
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     generate-ddl: false
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres

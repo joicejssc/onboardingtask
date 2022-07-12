@@ -2,12 +2,11 @@ package org.ait.project.onboardingtask.modules.user.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.ait.project.onboardingtask.shared.openfeign.order.response.CreateOrderResponse;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class OrderResponse extends CreateOrderResponse {
+public class OrderResponse {
 
     @NotBlank(message = "{orderId.required}")
     @JsonProperty("orderId")
