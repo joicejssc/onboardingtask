@@ -1,4 +1,4 @@
-package org.ait.project.onboardingtask.modules.user.model.entity;
+package org.ait.project.onboardingtask.modules.admin.model.entity;
 
 import java.math.BigDecimal;
 
