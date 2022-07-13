@@ -19,7 +19,6 @@ public class OrderController  {
 
     private final OrderService orderService;
 
-//    @Override
     @PostMapping("/addOrder")
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(
             @Valid @RequestBody
@@ -27,7 +26,6 @@ public class OrderController  {
         return orderService.addOrder(orderRequest);
     }
 
-//    @Override
     @GetMapping("/getOrderById/{id}")
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(@PathVariable BigDecimal id) {
         return orderService.getOrderById(id);
