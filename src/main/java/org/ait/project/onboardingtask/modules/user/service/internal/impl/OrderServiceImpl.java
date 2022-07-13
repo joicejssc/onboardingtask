@@ -29,17 +29,17 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(OrderRequest orderRequest) {
-        OrderResponse orderResponse = orderTransform.createOrderResp(orderRequest);
+        OrderResponse orderResponse = orderTransform.mappingOrderReqToOrderResp(orderRequest);
 
-        Order order = orderDelegate.save(orderTransform.createEntityResponse(orderResponse));
+        Order order = orderDelegate.save(orderTransform.mappingOrderRespToOrder(orderResponse));
 
         return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
-                orderTransform.createOrderResponse(order));
+                orderTransform.mappingOrderToOrderResp(order));
     }
 
     @Override
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(BigDecimal id) {
         return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
-                orderTransform.createOrderResponse(orderDelegate.getOrderById(id)));
+                orderTransform.mappingOrderToOrderResp(orderDelegate.getOrderById(id)));
     }
 }

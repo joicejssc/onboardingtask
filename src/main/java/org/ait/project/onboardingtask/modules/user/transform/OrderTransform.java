@@ -9,10 +9,10 @@ import org.mapstruct.Named;
 @Mapper(componentModel = "spring")
 public interface OrderTransform {
 
-    @Named("createEntityOrder")
-    OrderResponse createOrderResp(OrderRequest orderRequest);
-    @Named("createEntityResponse")
-    Order createEntityResponse(OrderResponse orderResponse);
-    @Named("createOrderResponse")
-    OrderResponse createOrderResponse(Order order);
+    @Named("mappingOrderReqToOrderResp")
+    OrderResponse mappingOrderReqToOrderResp(OrderRequest orderRequest);
+    @Named("mappingOrderRespToOrder")
+    Order mappingOrderRespToOrder(OrderResponse orderResponse);
+    @Named("mappingOrderToOrderResp")
+    OrderResponse mappingOrderToOrderResp(Order order);
 }

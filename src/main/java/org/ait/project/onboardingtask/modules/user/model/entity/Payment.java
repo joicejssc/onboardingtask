@@ -1,4 +1,4 @@
-package org.ait.project.onboardingtask.modules.admin.model.entity;
+package org.ait.project.onboardingtask.modules.user.model.entity;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
@@ -26,8 +26,8 @@ public class Payment {
 	@Column(name = "payment_no")
 	private String paymentNo;
 	
-	@Column(name = "transaction_no")
-	private String transactionNo;
+	@Column(name = "order_no")
+	private String orderNo;
 	
 	@Column(name = "bank_name")
 	private String bankName;
