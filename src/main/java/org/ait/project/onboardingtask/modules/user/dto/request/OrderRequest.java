@@ -3,32 +3,27 @@ package org.ait.project.onboardingtask.modules.user.dto.request;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
-
 @Data
-public class OrderReq {
+public class OrderRequest {
 
-    @NotBlank(message = "{orderId.required}")
-    @JsonProperty("orderId")
-    private String orderId;
+    @JsonProperty("orderNo")
+    private String orderNo;
 
-    @NotBlank(message = "{productNo.required}")
     @JsonProperty("productNo")
     private String productNo;
 
-    @NotBlank(message = "{productName.required}")
     @JsonProperty("productName")
     private String productName;
 
-    @NotBlank(message = "{qty.required}")
     @JsonProperty("qty")
     private Integer qty;
 
-    @NotBlank(message = "{statusOrder.required}")
     @JsonProperty("statusOrder")
     private String statusOrder;
 
-    @NotBlank(message = "{createdBy.required}")
     @JsonProperty("createdBy")
     private String createdBy;
+
+    @JsonProperty("createdDate")
+    private String createdDate;
 }

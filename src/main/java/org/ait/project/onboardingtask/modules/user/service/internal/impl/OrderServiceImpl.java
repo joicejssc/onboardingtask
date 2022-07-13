@@ -1,7 +1,7 @@
 package org.ait.project.onboardingtask.modules.user.service.internal.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.dto.request.OrderRequest;
 import org.ait.project.onboardingtask.modules.user.dto.response.OrderResponse;
 import org.ait.project.onboardingtask.modules.user.model.entity.Order;
 import org.ait.project.onboardingtask.modules.user.service.delegate.OrderDelegate;
@@ -28,8 +28,10 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(OrderReq orderReq) {
-        Order order = orderDelegate.save(orderTransform.createEntityOrder(orderReq));
+    public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(OrderRequest orderRequest) {
+        OrderResponse orderResponse = orderTransform.createOrderResp(orderRequest);
+
+        Order order = orderDelegate.save(orderTransform.createEntityResponse(orderResponse));
 
         return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
                 orderTransform.createOrderResponse(order));

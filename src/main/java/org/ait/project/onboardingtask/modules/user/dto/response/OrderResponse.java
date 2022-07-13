@@ -12,8 +12,8 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 public class OrderResponse {
 
-    @JsonProperty("orderId")
-    private String orderId;
+    @JsonProperty("orderNo")
+    private String orderNo;
 
     @JsonProperty("productNo")
     private String productNo;

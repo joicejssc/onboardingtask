@@ -18,8 +18,8 @@ public class Order {
 	@Column(name = "id")
 	private BigDecimal id;
 	
-	@Column(name = "order_id")
-	private String orderId;
+	@Column(name = "order_no")
+	private String orderNo;
 
 	@Column(name = "product_no")
 	private String productNo;

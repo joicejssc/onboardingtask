@@ -1,7 +1,7 @@
 package org.ait.project.onboardingtask.modules.user.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.ait.project.onboardingtask.modules.user.dto.request.OrderReq;
+import org.ait.project.onboardingtask.modules.user.dto.request.OrderRequest;
 import org.ait.project.onboardingtask.modules.user.dto.response.OrderResponse;
 import org.ait.project.onboardingtask.modules.user.service.internal.OrderService;
 import org.ait.project.onboardingtask.shared.dto.template.ResponseDetail;
@@ -14,20 +14,21 @@ import java.math.BigDecimal;
 
 @RestController
 @RequiredArgsConstructor
-public class OrderController implements OrderService {
+@RequestMapping(value = "/rest")
+public class OrderController  {
 
     private final OrderService orderService;
 
-    @Override
+//    @Override
     @PostMapping("/addOrder")
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(
             @Valid @RequestBody
-            OrderReq orderReq) {
-        return orderService.addOrder(orderReq);
+            OrderRequest orderRequest) {
+        return orderService.addOrder(orderRequest);
     }
 
-    @Override
-    @GetMapping("/{id}")
+//    @Override
+    @GetMapping("/getOrderById/{id}")
     public ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(@PathVariable BigDecimal id) {
         return orderService.getOrderById(id);
     }
