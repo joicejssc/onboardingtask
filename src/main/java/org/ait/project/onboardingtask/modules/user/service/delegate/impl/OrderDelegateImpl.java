@@ -30,7 +30,7 @@ public class OrderDelegateImpl implements OrderDelegate {
     }
 
     @Override
-    public Order updateStatusOrderByOrderNo(Order order) {
+    public Order updateStatusOrder(Order order) {
         return repository.save(order);
     }
 

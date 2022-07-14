@@ -48,10 +48,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrderByOrderNo(UpdateOrderRequest updateOrderRequest) {
+    public ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrder(UpdateOrderRequest updateOrderRequest) {
         logger.info("step 1 terima request : " + updateOrderRequest.getId() + " || " + updateOrderRequest);
         UpdateOrderResponse updateOrderResponse = orderTransform.mappingUpdateOrderReqToUpdateOrderResp(updateOrderRequest);
-        Order order = orderDelegate.updateStatusOrderByOrderNo(orderTransform.mappingUpdateOrderRespToOrder(updateOrderResponse));
+        Order order = orderDelegate.updateStatusOrder(orderTransform.mappingUpdateOrderRespToOrder(updateOrderResponse));
         return responseHelper.createResponseDetail(ResponseEnum.SUCCESS,
                 orderTransform.mappingOrderToUpdateOrderResp(order));
     }

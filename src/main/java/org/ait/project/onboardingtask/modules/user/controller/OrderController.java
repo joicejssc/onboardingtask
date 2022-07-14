@@ -36,8 +36,8 @@ public class OrderController implements OrderService  {
     }
 
     @Override
-    @PostMapping("/updateStatusOrderByOrderNo")
-    public ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrderByOrderNo(@RequestBody UpdateOrderRequest updateOrderRequest) {
-        return orderService.updateStatusOrderByOrderNo(updateOrderRequest);
+    @PostMapping("/updateStatusOrder")
+    public ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrder(@RequestBody UpdateOrderRequest updateOrderRequest) {
+        return orderService.updateStatusOrder(updateOrderRequest);
     }
 }

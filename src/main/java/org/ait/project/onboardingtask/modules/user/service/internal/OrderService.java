@@ -14,5 +14,5 @@ public interface OrderService {
 
     ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> addOrder(OrderRequest orderRequest);
     ResponseEntity<ResponseTemplate<ResponseDetail<OrderResponse>>> getOrderById(BigDecimal id);
-    ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrderByOrderNo(UpdateOrderRequest updateOrderRequest);
+    ResponseEntity<ResponseTemplate<ResponseDetail<UpdateOrderResponse>>> updateStatusOrder(UpdateOrderRequest updateOrderRequest);
 }

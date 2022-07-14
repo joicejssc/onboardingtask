@@ -10,6 +10,6 @@ public interface OrderDelegate {
 
     Order getOrderById(BigDecimal id);
 
-    Order updateStatusOrderByOrderNo(Order order);
+    Order updateStatusOrder(Order order);
 
 }
