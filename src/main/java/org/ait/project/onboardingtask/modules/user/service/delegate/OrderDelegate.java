@@ -9,4 +9,7 @@ public interface OrderDelegate {
     Order save(Order order);
 
     Order getOrderById(BigDecimal id);
+
+    Order updateStatusOrderByOrderNo(Order order);
+
 }
